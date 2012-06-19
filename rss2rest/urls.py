@@ -1,8 +1,12 @@
 from django.conf.urls import patterns, include, url
+from item.api import FeedItemResource
 
 # Uncomment the next two lines to enable the admin:
-from django.contrib import admin
-admin.autodiscover()
+#from django.contrib import admin
+#admin.autodiscover()
+
+
+feed_item_resource = FeedItemResource()
 
 urlpatterns = patterns('',
     # Examples:
@@ -10,8 +14,9 @@ urlpatterns = patterns('',
     # url(r'^rss2rest/', include('rss2rest.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
-    url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
+    #url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
-    url(r'^admin/', include(admin.site.urls)),
+    #url(r'^admin/', include(admin.site.urls)),
+    (r'^api/', include(feed_item_resource.urls)),
 )
