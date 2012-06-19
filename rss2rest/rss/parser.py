@@ -11,7 +11,7 @@ from item.models import FeedItem
 
 class FeedParser(object):
 
-    def __init__(self, feed_source, model):
+    def __init__(self, feed_source, model, mapping=None):
         app_name, model_name = model.split('.')
         self.model = get_model(app_name, model_name)
         self.valid_chars = "'-_.() %s%s" % (string.ascii_letters, string.digits)
@@ -25,26 +25,26 @@ class FeedParser(object):
         items = []
 
         for entry in self.feed.entries:
-            if not self.does_item_exist(source_id=entry['id']):
-                item = self.create_item_from_entry_dict(entry)
+            if not self._does_item_exist(source_id=entry['id']):
+                item = self._create_item_from_entry_dict(entry)
                 item.save()
                 items.append(item)
         return items
 
-    def does_item_exist(self, source_id):
+    def _does_item_exist(self, source_id):
         try:
             self.model.objects.get(source_id=source_id)
             return True
         except ObjectDoesNotExist:
             return False
 
-    def create_item_from_entry_dict(self, entry):
+    def _create_item_from_entry_dict(self, entry):
         item = self.model()
         item.source_url = entry['link']
         item.source_id = entry['id']
         item.source_title = ''.join(c for c in entry['title'] if c in self.valid_chars)
         item.thumbnail_url = entry['media_thumbnail'][0]['url']
-        item.description = ''.join(c for c in entry['summary'] if c in self.valid_chars)
+        item.description = entry['summary']
         item.author = None
         item.pub_date = None
         return item
