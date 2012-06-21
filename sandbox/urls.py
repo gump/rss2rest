@@ -1,5 +1,5 @@
 from django.conf.urls import patterns, include
-from api import FeedItemResource
+from rss2rest.api import FeedItemResource
 
 # Uncomment the next two lines to enable the admin:
 #from django.contrib import admin
