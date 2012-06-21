@@ -1,6 +1,6 @@
-from django.core.management.base import BaseCommand, CommandError
+from django.core.management.base import BaseCommand
 from django.conf import settings
-from rss.parser import MultiFeedParser
+from parser import MultiFeedParser
 
 
 class Command(BaseCommand):

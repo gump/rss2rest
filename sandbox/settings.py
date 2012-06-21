@@ -119,8 +119,7 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 
-    'rss',
-
+    'rss2rest',
     'tastypie',
 )
 
@@ -154,6 +153,6 @@ LOGGING = {
 }
 
 try:
-    from settings_local import *
+    from local_settings import *
 except ImportError:
     pass

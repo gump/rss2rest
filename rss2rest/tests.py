@@ -1,8 +1,8 @@
 import os
 from django.test import TestCase
 
-from rss.parser import FeedParser
-from rss.models import FeedItem
+from parser import FeedParser
+from models import FeedItem
 
 location = os.path.join(os.path.dirname(os.path.realpath(__file__)))
 
@@ -15,7 +15,7 @@ class FeedParserTestCase(TestCase):
             source_url='http://vimeo.com/test-vid',
             source_pub_date='2012-06-05 17:42:40'
         )
-        self.parser = FeedParser(location + '/samples/vimeo-likes.rss', 'rss.FeedItem')
+        self.parser = FeedParser(location + '/samples/vimeo-likes.rss', 'rss2rest.FeedItem')
 
     def test_count(self):
         entry_count = self.parser.count()

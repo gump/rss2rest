@@ -1,4 +1,4 @@
-from rss.abstract_models import *
+from abstract_models import *
 
 class FeedItem(AbstractFeedItem):
 
