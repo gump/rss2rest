@@ -3,6 +3,47 @@ rss2rest
 
 Turns RSS feeds into a RESTful API with the use of TastyPie and Feedparser
 
+Installation
+============
+
+Install via PIP:
+
+    $ pip install rss2rest
+
+
+Add to your `INSTALLED_APPS` the following:
+
+    INSTALLED_APPS = [
+        ...,
+        'tastypie',
+        'rss2rest',
+    ]
+
+Define your feeds:
+
+    RSS2REST_FEEDS = [
+        {'feed': 'http://feedurl/',
+         'model': 'rss2rest.FeedItem'},
+    ]
+
+Add RESTful routing to your `urls.py`:
+
+    from rss2rest.api import FeedItemResource
+    feed_item_resource = FeedItemResource()
+    urlpatterns += patterns('rss2rest',
+        (r'^api/', include(feed_item_resource.urls)),
+    )
+
+Usage
+=====
+
+Synchronise Feeds:
+
+    ./manage.py syncrss2rest
+
+Consume feeds go to:
+
+    http://127.0.0.1/rss2rest/api/
 
 Contribute
 ==========
