@@ -8,6 +8,6 @@ install: pip install -r sandbox/deploy/requirements.txt --use-mirrors
 # command to run tests
 script:
   - pip install -r sandbox/deploy/requirements.txt
-  - ./setup.py develop
+  - python setup.py develop
   - ./sandbox/manage.py syncdb
   - ./sandbox/manage.py test rss2rest
