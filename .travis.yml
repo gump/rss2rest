@@ -9,5 +9,6 @@ install: pip install -r sandbox/deploy/requirements.txt --use-mirrors
 script:
   - pip install -r sandbox/deploy/requirements.txt
   - python setup.py develop
+  - cp ./sandbox/local_settings_sample.py ./sandbox/local_settings.py
   - ./sandbox/manage.py syncdb
   - ./sandbox/manage.py test rss2rest
