@@ -1,6 +1,6 @@
 from django.core.management.base import BaseCommand
 from django.conf import settings
-from parser import MultiFeedParser
+from rss2rest.parser import MultiFeedParser
 
 
 class Command(BaseCommand):

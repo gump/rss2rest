@@ -12,5 +12,5 @@ DATABASES = {
 
 RSS2REST_FEEDS = [
         {'url': 'http://feeds.bbci.co.uk/news/rss.xml',
-         'model': 'item.FeedItem'},
+         'model': 'rss2rest.FeedItem'},
 ]
