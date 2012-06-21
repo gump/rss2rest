@@ -1,5 +1,7 @@
+.idea
 *.pyc
 *.log
 *.pot
 *.sqlite
 local_settings.py
+django_rss2rest.egg-info
