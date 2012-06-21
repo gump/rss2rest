@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+	    xmlns:media="http://search.yahoo.com/mrss/"
+	    xmlns:dc="http://purl.org/dc/elements/1.1/"
+	    xmlns:creativeCommons="http://cyber.law.harvard.edu/rss/creativeCommonsRssModule.html"
+	    	    xmlns:flickr="urn:flickr:user" >
+	<channel>
+
+
+		<title>Flickr favorites</title>
+		<link>http://www.flickr.com/favorites/</link>
+ 		<description>Favorites on Flickr</description>
+		<pubDate>Wed, 28 Apr 2010 12:25:35 -0700</pubDate>
+		<lastBuildDate>Wed, 28 Apr 2010 12:25:35 -0700</lastBuildDate>
+		<generator>http://www.flickr.com/</generator>
+		<image>
+			<url></url>
+			<title>Someone's favorites</title>
+			<link>http://www.flickr.com/photos/80745968@N03/favorites/</link>
+		</image>
+
+		<item>
+			<title>Wallpaper zoom burst</title>
+			<link>http://www.flickr.com/photos/doug88888/4561391974/</link>
+			<description>&lt;p&gt;&lt;a href=&quot;http://www.flickr.com/people/doug88888/&quot;&gt;@Doug88888&lt;/a&gt; posted a photo:&lt;/p&gt;
+			            &lt;p&gt;&lt;a href=&quot;http://www.flickr.com/photos/doug88888/4561391974/&quot; title=&quot;Wallpaper zoom burst&quot;&gt;&lt;img src=&quot;http://farm4.staticflickr.com/3284/4561391974_af4fe5218c_m.jpg&quot; width=&quot;240&quot; height=&quot;160&quot; alt=&quot;Wallpaper zoom burst&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+                        &lt;p&gt;Wallpaper zoom burst&lt;/p&gt;</description>
+			<pubDate>Wed, 28 Apr 2010 12:25:35 -0700</pubDate>
+			<dc:date.Taken>2010-04-22T14:36:07-08:00</dc:date.Taken>
+            <author flickr:profile="http://www.flickr.com/people/doug88888/">nobody@flickr.com (@Doug88888)</author>
+			<guid isPermaLink="false">tag:flickr.com,2004:/photo/4561391974/</guid>
+            <media:content url="http://farm4.staticflickr.com/3284/4561391974_af4fe5218c_b.jpg" type="image/jpeg" height="683" width="1024"/>
+            <media:title>Wallpaper zoom burst</media:title>
+            <media:description type="html">&lt;p&gt;Wallpaper zoom burst&lt;/p&gt;</media:description>
+            <media:thumbnail url="http://farm4.staticflickr.com/3284/4561391974_af4fe5218c_s.jpg" height="75" width="75" />
+            <media:credit role="photographer">@Doug88888</media:credit>
+            <media:category scheme="urn:flickr:tags">wallpaper canon zoom burst 550d</media:category>
+    		<creativeCommons:license>http://creativecommons.org/licenses/by-nc/2.0/deed.en</creativeCommons:license>
+	    </item>
+		<item>
+			<title>Wallpaper zoom burst 2</title>
+			<link>http://www.flickr.com/photos/doug88888/4561391974/</link>
+			<description>&lt;p&gt;&lt;a href=&quot;http://www.flickr.com/people/doug88888/&quot;&gt;@Doug88888&lt;/a&gt; posted a photo:&lt;/p&gt;
+			            &lt;p&gt;&lt;a href=&quot;http://www.flickr.com/photos/doug88888/4561391974/&quot; title=&quot;Wallpaper zoom burst&quot;&gt;&lt;img src=&quot;http://farm4.staticflickr.com/3284/4561391974_af4fe5218c_m.jpg&quot; width=&quot;240&quot; height=&quot;160&quot; alt=&quot;Wallpaper zoom burst&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+                        &lt;p&gt;Wallpaper zoom burst&lt;/p&gt;</description>
+			<pubDate>Wed, 28 Apr 2010 12:25:35 -0700</pubDate>
+			<dc:date.Taken>2010-04-22T14:36:07-08:00</dc:date.Taken>
+            <author flickr:profile="http://www.flickr.com/people/doug88888/">nobody@flickr.com (@Doug88888)</author>
+			<guid isPermaLink="false">tag:flickr.com,2004:/photo/4561391974/</guid>
+            <media:content url="http://farm4.staticflickr.com/3284/4561391974_af4fe5218c_b.jpg" type="image/jpeg" height="683" width="1024"/>
+            <media:title>Wallpaper zoom burst</media:title>
+            <media:description type="html">&lt;p&gt;Wallpaper zoom burst&lt;/p&gt;</media:description>
+            <media:thumbnail url="http://farm4.staticflickr.com/3284/4561391974_af4fe5218c_s.jpg" height="75" width="75" />
+            <media:credit role="photographer">@Doug88888</media:credit>
+            <media:category scheme="urn:flickr:tags">wallpaper canon zoom burst 550d</media:category>
+    		<creativeCommons:license>http://creativecommons.org/licenses/by-nc/2.0/deed.en</creativeCommons:license>
+		</item>
+
+	</channel>
+</rss>

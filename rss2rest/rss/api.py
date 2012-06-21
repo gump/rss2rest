@@ -1,5 +1,5 @@
 from tastypie.resources import ModelResource
-from item.models import FeedItem
+from rss.models import FeedItem
 
 
 class FeedItemResource(ModelResource):

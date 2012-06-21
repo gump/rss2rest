@@ -1,12 +1,7 @@
-import re
 import string
-from time import mktime
-from datetime import datetime
 import feedparser
 from django.core.exceptions import ObjectDoesNotExist
 from django.db.models import get_model
-
-from item.models import FeedItem
 
 
 class FeedParser(object):
@@ -40,13 +35,10 @@ class FeedParser(object):
 
     def _create_item_from_entry_dict(self, entry):
         item = self.model()
-        item.source_url = entry['link']
-        item.source_id = entry['id']
-        item.source_title = ''.join(c for c in entry['title'] if c in self.valid_chars)
-        item.thumbnail_url = entry['media_thumbnail'][0]['url']
-        item.description = entry['summary']
-        item.author = None
-        item.pub_date = None
+
+        for key in item.MAPPING.keys():
+            value_key = item.MAPPING[key]
+            item.__setattr__(key, entry[value_key])
         return item
 
 
@@ -54,11 +46,7 @@ class MultiFeedParser(object):
 
     def parse_feeds(self, feed_list):
 
-        print "Starting to parse the feed list"
-
         for feed in feed_list:
-            print "Parsing feed: %s" % feed
             parser = FeedParser(feed['url'], feed['model'])
             parser.sync_feed_items()
 
-        print "Parsing finished"

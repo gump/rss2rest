@@ -9,6 +9,8 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
 
+        self.stdout.write('Beginning feed synchronisation')
         parser = MultiFeedParser()
         parser.parse_feeds(settings.RSS2REST_FEEDS)
+        self.stdout.write('Synchronisation complete')
 

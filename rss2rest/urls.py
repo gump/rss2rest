@@ -1,5 +1,5 @@
-from django.conf.urls import patterns, include, url
-from item.api import FeedItemResource
+from django.conf.urls import patterns, include
+from rss.api import FeedItemResource
 
 # Uncomment the next two lines to enable the admin:
 #from django.contrib import admin
