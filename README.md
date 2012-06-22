@@ -15,7 +15,7 @@ Installation
 
 Install via PIP:
 
-    $ pip install rss2rest
+    $ pip install django-rss2rest
 
 
 Add to your `INSTALLED_APPS` the following:
