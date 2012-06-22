@@ -1,5 +1,5 @@
 
-VERSION = (0, 1, 0, 'alpha', 0)
+VERSION = (0, 1, 0, 'final', 0)
 
 def get_short_version():
     return '%s.%s' % (VERSION[0], VERSION[1])
