@@ -21,7 +21,7 @@ class FeedParser(object):
         items = []
 
         for entry in self.feed.entries:
-            if not self._does_item_exist(source_id=entry['id']):
+            if not self._does_item_exist(source_id=entry.get('id')):
                 item = self._create_item_from_entry_dict(entry)
                 item.save()
                 items.append(item)
@@ -38,8 +38,8 @@ class FeedParser(object):
         item = self.model()
 
         for key in item.MAPPING.keys():
-            value_key = item.MAPPING[key]
-            item.__setattr__(key, entry[value_key])
+            value_key = item.MAPPING.get(key)
+            item.__setattr__(key, entry.get(value_key))
         return item
 
 
