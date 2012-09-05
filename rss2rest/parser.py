@@ -1,3 +1,4 @@
+import logging
 import string
 import feedparser
 from django.core.exceptions import ObjectDoesNotExist
@@ -47,6 +48,9 @@ class MultiFeedParser(object):
     def parse_feeds(self, feed_list):
 
         for feed in feed_list:
-            parser = FeedParser(feed['url'], feed['model'])
-            parser.sync_feed_items()
+            try:
+                parser = FeedParser(feed.get('url'), feed.get('model'))
+                parser.sync_feed_items()
+            except Exception as e:
+                logging.exception('Given feed could not be parsed')
 
