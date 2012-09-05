@@ -121,6 +121,7 @@ INSTALLED_APPS = (
 
     'rss2rest',
     'tastypie',
+    'south',
 )
 
 # A sample logging configuration. The only tangible logging
