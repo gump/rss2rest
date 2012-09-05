@@ -8,7 +8,9 @@ class FeedItem(AbstractFeedItem):
         'source_title': 'title',
         'source_description': 'summary',
     }
-    pass
+
+    class Meta:
+        verbose_name = "Feed item"
 
 class VimeoFeedItem(AbstractFeedItem):
 
@@ -18,10 +20,14 @@ class VimeoFeedItem(AbstractFeedItem):
         'source_title': 'title',
         'source_description': 'summary',
     }
-    pass
+
+    class Meta:
+        verbose_name = "Vimeo video"
 
 class PictureFeedItem(AbstractFeedItem):
-    pass
+
+    class Meta:
+        verbose_name = "Picture"
 
 class FlickrFeedItem(PictureFeedItem):
 
@@ -35,3 +41,6 @@ class FlickrFeedItem(PictureFeedItem):
     }
 
     author_url = models.URLField(max_length=255)
+
+    class Meta:
+        verbose_name = "Flickr photo"

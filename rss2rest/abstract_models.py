@@ -16,3 +16,6 @@ class AbstractFeedItem(models.Model):
         abstract = True
         ordering = ['source_pub_date']
         verbose_name_plural = "Feed items"
+
+    def __unicode__(self):
+        return self.source_title
