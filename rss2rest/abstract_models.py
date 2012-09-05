@@ -10,8 +10,8 @@ class AbstractFeedItem(models.Model):
     source_thumbnail = models.URLField(null=True)
     source_pub_date = models.DateTimeField(null=True)
     sync_date = models.DateTimeField(auto_now=True)
-    publish = models.BooleanField()
-    publish_date = models.DateTimeField()
+    publish = models.BooleanField(default=False)
+    publish_date = models.DateTimeField(null=True)
 
     class Meta:
 
